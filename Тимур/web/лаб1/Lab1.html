@@ -1,0 +1,304 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href="normalize.css">
+
+        <!--стили кода-->
+        <style>
+            .code {
+                font-family: "Courier New", monospace;
+                background-color: #f4f4f4;
+                padding: 10px;
+                border-radius: 5px;
+                line-height: 1.6;
+            }
+            .keyword {
+                color: #0000ff;
+            }
+            .string {
+                color: #008000;
+            }
+            .comment {
+                color: #808080;
+            }
+            </style>
+
+            <!--стили картинок-->
+            <style>
+            .imgcenter{
+                text-align: center;
+            }
+            .imgright{
+                float: right;
+                margin: auto;
+            }
+            .imgleft{
+                float: left;
+                margin-right: 10px;
+            }
+            </style>
+
+            <!--стили текста-->
+            <style>
+            @font-face {
+                font-family: 'MyCustomFont';
+              src: url('Gagalin-Regular.otf');
+                }
+
+            h1 {
+                font-size: 24px;
+                font-family: 'MyCustomFont';
+            }
+            h1.main-title{
+                text-align: center;
+            }
+            .center {
+                text-align: center;
+            }
+            .center a {
+                display: inline-block;
+            }
+            h2 {
+                font-size: 18px;
+                font-family: 'MyCustomFont';
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul {
+                list-style-type: disc;
+            }
+
+            ol {
+                list-style-type: decimal;
+            }
+            
+            .custom-list {
+                list-style-type: none;
+            }
+
+            .custom-list li::before {
+                content: "";
+                display: inline-block;
+                height: 30px;
+                width: 30px;
+                background-image: url("pictures/pic.png");
+                background-size: cover;
+                margin-right: 10px;
+            }
+        </style>
+
+        <!--стили тиблицы-->
+        <style>
+            table.t1 {
+                margin: 1em auto;
+                border-collapse: collapse;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .t1 th, .t1 td {
+                padding: 4px 8px;
+            }
+            .t1 thead th {
+                background: #4f81bd;
+                text-transform: lowercase;
+                text-align: left;
+                font-size: 15px;
+                color: #fff;
+                
+            }
+            .t1 tr {
+                border-right: 1px solid #95b3d7;
+            }
+            .t1 tbody tr {
+                border-bottom: 1px solid #95b3d7;
+            }
+            .t1 tbody tr:nth-child(odd) {
+                background: #dbe5f0;
+            }
+            .t1 tbody th, .t1 tbody tr:nth-child(even) td {
+                border-right: 1px solid #95d7d6;
+            }
+            .t1 tfoot th {
+                background: #4f81bd;
+                text-align: left;
+                font-weight: normal;
+                font-size: 10px;
+                color: #fff;
+            }
+            .t1 tr *:nth-child(3), .t1 tr *:nth-child(4) {
+                text-align: right;
+            }
+  
+        </style>
+
+
+        <title>Lab1Web</title>
+        <meta charset="utf 8"/>
+    </head>
+
+
+    <body> 
+        <h1 class="main-title"> Java </h1>
+        <div class="center">
+            <a href="#History">К истории</a>
+            <a href="#OverView">К краткому обзору</a>
+            <a href="#CodeView">К примеру кода</a>
+          </div>
+
+        <hr>
+
+        <h2 id = "History"> История </h2>
+        <p>
+            <img class="imgleft" 
+            src = "pictures/Oak.jpg"
+            title="Oak(like java before)">
+            Изначально язык назывался Oak («Дуб»), разрабатывался Джеймсом Гослингом для программирования бытовых электронных устройств. Из-за того, что язык с таким названием уже существовал, Oak был переименован в Java. Назван в честь марки кофе Java, которая, в свою очередь, получила наименование одноимённого острова (Ява), поэтому на официальной эмблеме языка изображена чашка с горячим кофе. Существует и другая версия происхождения названия языка, связанная с аллюзией на кофемашину как пример бытового устройства, для программирования которого изначально язык создавался. В соответствии с этимологией в русскоязычной литературе с конца двадцатого и до первых лет двадцать первого века название языка нередко переводилось как Ява, а не транскрибировалось.
+        В результате работы проекта мир увидел принципиально новое устройство, карманный персональный компьютер Star7, который опередил своё время более чем на 10 лет, но из-за большой стоимости в 50 долларов не смог произвести переворот в мире технологии и был забыт.
+        Устройство Star7 не пользовалось популярностью, в отличие от языка программирования Java и его окружения. Следующим этапом жизни языка стала разработка интерактивного телевидения. В 1994 году стало очевидным, что интерактивное телевидение было ошибкой.
+        С середины 1990-х годов язык стал широко использоваться для написания клиентских приложений и серверного программного обеспечения. Тогда же определённое распространение получила технология Java-апплетов — графических Java-приложений, встраиваемых в веб-страницы; с развитием возможностей динамических веб-страниц в 2000-е годы технология стала применяться редко.
+        В веб-разработке применяется Spring Framework; для документирования используется утилита Javadoc.
+        </p>
+        <table class="t1" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
+            <caption>Версии Джавы, дата выхода и их кодовое имя в процессе разработки</caption>
+            <thead>
+              <tr>
+                <th>версия</th>
+                <th>год выпуска</th>
+                <th>кодовое имя</th>
+               
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th colspan="4">Giorgadze.georgia</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr><td>JDK 1.0</td><td>21 января 1996</td><td>-</td></tr>
+              <tr><td>JDK 1.1</td><td>19 февраля 1997</td><td>-</td></tr>
+              <tr><td>J2SE 1.2</td><td>8 декабря 1998</td><td>Playground</td></tr>
+              <tr><td>J2SE 1.3</td><td>8 мая 2000</td><td> Kestrel</td></tr>
+              <tr><td>J2SE 1.4</td><td>6 февраля 2002 </td><td> Merlin</td></tr>
+              <tr><td>J2SE 5.0</td><td>30 сентября 2004</td><td>Tiger</td></tr>
+              <tr><td>JSE 6</td><td>11 декабря 2006</td><td>Mustang</td></tr>
+              <tr><td>JavaFX</td><td>8 октября 2013</td><td>Dolphin</td></tr>
+              <tr><td>Java ME Embedded</td><td>10 октября 2013</td><td>Micro Edition</td></tr>
+              <tr><td>Java SE 7</td><td>28 июля 2011</td><td>Dolphin</td></tr>
+              <tr><td>Java SE 8</td><td>19 марта 2014</td><td>Octopus</td></tr>
+              <tr><td>Java SE 9</td><td>21 сентября 2017</td><td>-</td></tr>
+              <tr><td>Java SE 10</td><td>20 марта 2018</td><td> -</td></tr>
+              <tr><td>Java SE 11</td><td>25 сентября 2018</td><td> -</td></tr>
+              <tr><td>Java SE 12</td><td>19 марта 2019</td><td>-</td></tr>
+              <tr><td>Java SE 13</td><td>17 сентября 2019</td><td>-</td></tr>
+              <tr><td>Java SE 14</td><td>17 марта 2020</td><td>-</td></tr>
+              <tr><td>Java SE 15</td><td>15 сентября 2020</td><td>-</td></tr>
+              <tr><td>Java SE 16</td><td>16 марта 2021</td><td>-</td></tr>
+              <tr><td>Java SE 17</td><td>14 сентября 2021</td><td>-</td></tr>
+              <tr><td>Java SE 18</td><td>22 марта 2022</td><td>-</td></tr>
+              <tr><td>Java SE 19</td><td>20 сентября 2022</td><td>-</td></tr>
+              <tr><td>Java SE 20</td><td>21 марта 2023</td><td>-</td></tr>
+              <tr><td>Java SE 21</td><td>19 сентября 2023</td><td>-</td></tr>
+            </tbody>
+          </table>
+        <h2 id = "OverView"> Краткий обзор </h2>
+        <p>
+            Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems (в последующем приобретённой компанией Oracle). Разработка ведётся сообществом, организованным через Java Community Process; язык и основные реализующие его технологии распространяются по лицензии GPL. Права на торговую марку принадлежат корпорации Oracle.
+            Приложения Java обычно транслируются в специальный байт-код, поэтому они могут работать на любой компьютерной архитектуре, для которой существует реализация виртуальной Java-машины. Дата официального выпуска — 23 мая 1995 года. Занимает высокие места в рейтингах популярности языков программирования (2-е место в рейтингах IEEE Spectrum (2020) и TIOBE (2021)).
+        </p>
+        <h2 id = "CodeView"> Пример кода </h2>
+        <p class="imgcenter">
+            <img src = "pictures/JavaLogo.png"
+            title="Java logo">
+        </p>
+        <pre class="code">
+            <span class="keyword">import</span> javax.imageio.ImageIO;
+            <span class="keyword">import</span> java.awt.*;
+            <span class="keyword">import</span> java.awt.image.BufferedImage;
+            <span class="keyword">import</span> java.io.File;
+            <span class="keyword">import</span> java.io.IOException;
+            
+            <span class="keyword">public class</span> Main {
+                <span class="keyword">public static void</span> main(String[] args) {
+                    String inputFilePath = <span class="string">"C:\\Users\\temu1\\IdeaProjects\\Lab5Graph\\src\\examle.bmp"</span>;
+                    String outputFilePathFor45 = <span class="string">"C:\\Users\\temu1\\IdeaProjects\\Lab5Graph\\src\\output45_2.bmp"</span>;
+                    String outputFilePathFor90 = <span class="string">"C:\\Users\\temu1\\IdeaProjects\\Lab5Graph\\src\\output90_2.bmp"</span>;
+            
+                    <span class="keyword">try</span> {
+                        BufferedImage image = ImageIO.read(<span class="keyword">new</span> File(inputFilePath));
+            
+            
+                        <span class="keyword">double</span> angle45 = Math.toRadians(45);
+                        BufferedImage result45 = rotateImage(image, angle45);
+                        ImageIO.write(result45, "bmp", <span class="keyword">new</span> File(outputFilePathFor45));
+                        System.out.println(<span class="string">"Файл успешно обработан и сохранен: "</span> + outputFilePathFor45);
+            
+            
+                        <span class="keyword">double</span> angle90 = Math.toRadians(90);
+                        BufferedImage result90 = rotateImage(image, angle90);
+                        ImageIO.write(result90, "bmp", <span class="keyword">new</span> File(outputFilePathFor90));
+                        System.out.println(<span class="string">"Файл успешно обработан и сохранен: "</span> + outputFilePathFor90);
+            
+                    } <span class="keyword">catch</span> (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            
+                <span class="keyword">private static</span> BufferedImage rotateImage(BufferedImage image, <span class="keyword">double</span> angle) {
+                    <span class="keyword">double</span> sin = Math.abs(Math.sin(angle));
+                    <span class="keyword">double</span> cos = Math.abs(Math.cos(angle));
+                    <span class="keyword">int</span> w = image.getWidth();
+                    <span class="keyword">int</span> h = image.getHeight();
+                    <span class="keyword">int</span> neww = (int)Math.floor(w*cos+h*sin);
+                    <span class="keyword">int</span> newh = (int)Math.floor(h*cos+w*sin);
+                    BufferedImage result = <span class="keyword">new</span> BufferedImage(neww, newh, BufferedImage.TYPE_INT_ARGB);
+                    Graphics2D g = result.createGraphics();
+                    g.translate((neww-w)/2, (newh-h)/2);
+                    g.rotate(angle, w/2, h/2);
+                    g.drawRenderedImage(image, null);
+                    <span class="keyword">return</span> result;
+                }
+            }
+            </pre>
+            <p class="imgright">
+                <img 
+                src = "pictures/CopyRight.png"
+                title="All right reserved(or not)">
+            </p>
+            <p>
+                Сайты использующие Java
+            </p>
+            <ol>
+                <li>YouTube</li>
+                <li>Amazon</li>
+                <li>Ebay</li>
+                <li>Twitter(X)</li>
+            </ol>
+            <!-- Маркированный список со стандартным маркером -->
+            <p>
+                Приложения использующие Java
+            </p>
+            <ul>
+                <li>ThinkFree Office</li>
+                <li>Blu-ray BD-J </li>
+                <li>NASA World Wind</li>
+                <li>Minecraft</li>
+                <li>JPC</li>
+            </ul>
+            <p>Преимущества джава перед другими языками</p>
+            <!-- Маркированный список с маркером в виде картинки -->
+            <ul class="custom-list">
+                <li>кросс-платформенность</li>
+                <li>объектно-ориентированность</li>
+                <li>безопасность</li>
+                <li>автоматическое управление памятью</li>
+                <li>стабильность</li>
+                <li>богатая стандартная библиотека</li>
+                <li>масштабируемость</li>
+                <li>многопоточность</li>
+                <li>большое сообщество</li>
+                <li>проверенная временем</li>
+
+            </ul>
+    </body>
+</html>
