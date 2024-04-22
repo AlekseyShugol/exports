@@ -1,0 +1,22 @@
+ul.custom {
+    list-style-type: none;
+}
+ul p.inUL {
+    margin-top: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+
+}
+li.custom::before {
+   
+    content: "";
+    display: inline-block;
+    height: 15px;  /* Установите высоту изображения */
+    width: 15px;   /* Установите ширину изображения */
+    background-size: cover;
+    margin-right: 10px;
+    background-image: url('../source/images/assembly-icon.png');  
+}
+li{
+    font-size: 14px;
+}

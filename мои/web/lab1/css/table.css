@@ -1,0 +1,37 @@
+
+table.t1 {
+    margin: 1em auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .t1 th, .t1 td {
+    padding: 4px 8px;
+  }
+  
+  .t1 thead th {
+    background: #808080;
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+  }
+  .t1 tr {
+    border-right: 5px solid #808080;
+    border-left: 5px solid #808080;
+  }
+  .t1 tbody tr {
+    border-bottom: px solid #808080;
+  }
+  .t1 tbody th, .t1 tbody tr td {
+    border-right: 1px solid #808080;
+  }
+  .t1 tfoot th {
+    background: #808080;
+    text-align: left;
+    font-weight: normal;
+    font-size: 10px;
+    color: #fff;
+  }
+  .t1 tr {
+    border-bottom: 1px solid #808080 /* Черная линия */
+}

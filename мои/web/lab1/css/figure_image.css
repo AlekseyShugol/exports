@@ -1,0 +1,31 @@
+figcaption{
+    font-size: 11px;
+    font-family: 'FuturaPT', sans-serif;
+}
+.assemblyProcess {
+    float: left; 
+    border: 1px solid #000; /* Параметры рамки */
+    padding: 7px; /* Поля внутри блока */
+    margin: 10px 10px 5px 5px; /* Отступы вокруг */
+    background: #f7efe3; /* Цвет фона */ 
+    width: 200px;
+    border-bottom-right-radius:90px;
+    border-bottom-style:dashed;
+    border-bottom-width:30px;
+    border-left:10px;
+    border-top-color:aqua;
+    border-top-left-radius:40px;
+    border-right-style:double;
+    opacity:inherit;
+    border-bottom-left-radius:20px;
+    border-top:#f7efe3;
+    max-width:max-content;
+}
+   .sign figcaption {
+    margin: 0 auto 5px; /* Отступы вокруг абзаца */
+   }
+
+   img.asmLogo{
+    width: 200px;
+    height: 200px;
+   }

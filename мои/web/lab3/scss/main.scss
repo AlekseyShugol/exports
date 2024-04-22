@@ -1,0 +1,95 @@
+@import "source"; // Импорт другого SCSS или CSS файла
+
+.registration-window {
+    display: flex; 
+    justify-content: center; // Выравнивание элементов по горизонтали
+    align-items: center; // Выравнивание элементов по вертикали
+    height: 100vh; // Высота равна 100% высоты вьюпорта
+    background-color: $background-color; 
+    padding: 50px; // Отступы вокруг содержимого
+    box-shadow: 0px 0px 10px $box-shadow-color; // Тень вокруг элемента
+    background-color: $main-color; 
+}
+
+.container {
+  align-items: center; 
+  display: flex; 
+  justify-content: space-between; // Распределение элементов с пространством между ними
+  width: $container-width; // Ширина контейнера
+  max-width: $max-width; // Максимальная ширина контейнера
+  background-color: $registration-frame-color; // Цвет фона контейнера
+  border-radius: 15px; // Скругление углов контейнера
+  position: relative; // Позиционирование относительно нормального потока
+}
+
+.text {
+     align-items: flex-start; // Выравнивание элементов по вертикали
+    flex: 3; // Пропорция занимаемого пространства в flex контейнере
+    padding-right: 20px; // Отступ справа
+    margin-bottom: 5px; // Отступ снизу
+    margin-left: 20px; // Отступ слева
+    align-self: flex-start; // Выравнивание элемента по вертикальной оси
+    margin-top: 60px; // Отступ сверху
+}
+
+.image-container{
+    position: absolute; // Позиционирование относительно ближайшего позиционированного предка
+    top: 10px; // Отступ сверху
+    left: 20px; // Отступ слева
+    width: 40px; // Ширина контейнера
+    height: 40px; // Высота контейнера
+    img {
+        width: 100%; // Ширина изображения
+        height: 100%; // Высота изображения
+        object-fit: cover; // Масштабирование изображения для заполнения контейнера без искажений
+    }
+}
+
+.forms {
+  margin-top: 100px; // Отступ сверху
+  flex: 4; // Пропорция занимаемого пространства в flex контейнере
+  display: flex; // Использование flexbox для управления макетом
+  flex-direction: column; // Направление элементов в flex контейнере
+  gap: 10px; // Расстояние между элементами
+  margin-right: 20px; // Отступ справа
+  align-self: center; // Выравнивание элемента по вертикальной оси
+}
+
+button{
+    background-color: $button-color; // Цвет фона кнопки
+    color: #ffffff; // Цвет текста кнопки
+    height: 28px; // Высота кнопки
+    width: 60px; // Ширина кнопки
+    top: 50%; // Позиционирование кнопки по вертикали
+    font-family: $fonts-settings; // Шрифт текста кнопки
+    border-radius: 25px; // Скругление углов кнопки
+    border: 1px solid $button-color; // Граница кнопки
+    margin-left: auto; // Автоматический отступ слева
+    margin-top: 20px; // Отступ сверху
+    margin-bottom: 15px; // Отступ снизу
+}
+
+input {
+    height: 34px; // Высота поля ввода
+    border-radius: 5px; // Скругление углов поля ввода
+    border: 1px solid black; // Граница поля ввода
+}
+
+.top {
+    font-family:  $fonts-settings; // Шрифт текста
+    font-weight: 400; // Толщина шрифта
+    font-size: 2rem; // Размер шрифта
+    margin-bottom: 5px; // Отступ снизу
+}
+
+.bottom
+{
+    font-family: $fonts-settings; // Шрифт текста
+    font-size: 11px; // Размер шрифта
+}
+
+div.forms p.error{
+    margin-top: 5px; // Отступ сверху
+    color: #ff0000; // Цвет текста
+    font-size: 11px; // Размер шрифта
+}

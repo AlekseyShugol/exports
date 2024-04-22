@@ -1,0 +1,37 @@
+.mrgn{
+    margin-left: 40px; 
+ }
+span.lib{
+    color:#000dff;
+}
+span.section{
+    background-color: #ff5100;
+}
+span.typedata{
+    color:#830404
+}
+span.string{
+    color:#0f8a04
+}
+span.instruction{
+    color:#6a00ff
+}
+span.register{
+    font-weight: bold;
+    color: #4e6ac6;
+}
+span.handle{
+    color:#bc00a9
+}
+.codeFigire {
+    text-align: center;
+}
+.codeFigire code {
+    font-size: 11px;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #fdf6e7;
+    border-radius: 5px;
+}

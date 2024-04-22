@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.registration-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1019607843);
+  background-color: #f0f4f9;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.text {
+  align-items: flex-start;
+  flex: 3;
+  padding-right: 20px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  align-self: flex-start; /* Выравнивание по вертикальной оси */
+  margin-top: 60px;
+}
+
+.image-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.forms {
+  margin-top: 100px;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 20px;
+  align-self: center; /* Выравнивание по вертикальной оси */
+}
+
+button {
+  background-color: #0b57d0;
+  color: #ffffff;
+  height: 28px;
+  width: 60px;
+  top: 50%;
+  font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  border-radius: 25px;
+  border: 1px solid #0b57d0;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+input {
+  height: 34px;
+  border-radius: 5px; /* Радиус скругления */
+  border: 1px solid black; /* Ширина, стиль и цвет границы */
+}
+
+.top {
+  font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.bottom {
+  font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 11px;
+}
+
+div.forms p.error {
+  margin-top: 5px;
+  color: #ff0000;
+  font-size: 11px;
+}/*# sourceMappingURL=main.css.map */

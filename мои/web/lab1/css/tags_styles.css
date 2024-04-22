@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('../source/fonts/FuturaPt/FuturaPT-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SonyFixed';
+    src: url('../source/fonts/Sony_Fixed/SONY-Fixed.ttf') format('truetype');
+}
+
+
+body {
+    background-color: #f7efe3;
+}
+h1{
+    font-family: 'FuturaPT', sans-serif;
+    font-size: 24px;
+    
+}
+.my-button {
+    text-align: center;
+    display: block; /* Изменил значение на "block" для центрирования */
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    margin: 0 auto; /* Это центрирует блок по горизонтали */
+}
