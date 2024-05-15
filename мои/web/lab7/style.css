@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #c3f3ff;
+    font-family: Arial, sans-serif;
+}
+.field{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color:#eee; 
+}
+.block{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border-radius: 5px;
+}
+#game-log {
+    margin-top: 20px;
+    margin-left: auto; /* Добавлено */
+    width: 200px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    padding: 10px;
+}
+

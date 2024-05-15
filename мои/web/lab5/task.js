@@ -1,9 +1,9 @@
 document.getElementById('task1').onclick = function() {
     let str1 = prompt("Введите первую строку:");
     let str2 = prompt("Введите вторую строку:");
-    let sortedStr1 = str1.split('').sort().join('');
+    let sortedStr1 = str1.split('').sort().join('');//просто сортируем буквы в алфавитном порядке
     let sortedStr2 = str2.split('').sort().join('');
-    console.log("Задание 1:");
+    console.log("Задание 1:");//местный вывод
     console.log("Строка 1: "+str1);
     console.log("Строка 2: "+str2);
     console.log("Результат: "+(sortedStr1===sortedStr2))
@@ -19,68 +19,55 @@ document.getElementById('task2').onclick = function() {
     }
   };
   
-
+//задание 3
 document.getElementById('task3').onclick = function() {
-    console.log("\n");
-    console.log("Задание 3:");
-    let max = 10;
-    let min = -100;
-    let array = [];
-    let length =  Math.floor(Math.random() * (max + 1)) ;
-    console.log("Размер сгенерированного массива массива: "+length);
-
-    for(let i = 0; i < length; i++){
-        let number = getRandomNumber(-10,100);
-        array.push(number);
-    }
-    console.log("Исходный массив(сгенерированный): "+array);
-    console.log(findUniqueValues(array));
-    console.log("\n");
-    let myArray = [1,2,3,4,5,6,7,7,7,7,6,8,99,8,87,NaN];
-    console.log("Массив,заданный вручную: "+ myArray);
-    console.log(findUniqueValues(myArray));
-
-}
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min + Date.now() % 1000; 
-}
-
-function findUniqueValues(array){
- let uniqueValues = [];
- //проходимся по исходному массиву
-    for (let i = 0; i < array.length; i++) {
-        let current = array[i];
-        let isUnique = true;
-        //сравниваем текущее число и элементы массива
-        for (let j = 0; j < uniqueValues.length; j++) {
-            if (current === uniqueValues[j]) {
-                //проходимся по массиву с уникальными элементами
-                console.log("Элемент "+uniqueValues[j]+ " не является исключительным")
-                    isUnique = false;
-                    break;
+    document.getElementById('task3').onclick = function() {
+        console.log("\n");
+        console.log("Задание 3:");
+        var array = [1,2,3,4,7,1,5,4,6,7,8,9,7,99,0,99];
+        var uniqueValues = [];
+        for(var i=0;i<array.length;i++){
+            var current = array[i];
+            var count = 0;
+            for(var j = 0;j<array.length;j++)
+            {
+                if(current==array[j]){
+                   count++;
                 }
-                //проверка на то, является ли уникальное число уникальным на самом деле
-                for(let k = 0;k < uniqueValues.length;k++){
-                    if(current===uniqueValues[k]){
-                        console.log("Элемент "+uniqueValues[k]+ " не является исключительным")
-                        isUnique = false;
-                        uniqueValues.splice(k, 1);//если нет, то удаляем его
-                        break;
-                    }
-                
+            }
+            if(count == 1){
+                uniqueValues.push(current);
             }
         }
-        if (isUnique) {
-            uniqueValues.push(current);
+        console.log(uniqueValues);
+    }
+}
+    
+
+function findUniqueValues(array){
+    let uniqueValues = {};
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        let current = array[i];
+        if (uniqueValues[current] === undefined) {
+            uniqueValues[current] = 1;
+            result.push(current);
+        } else {
+            continue; // пропустить повторяющиеся значения
         }
     }
     return uniqueValues;
 }
 
 
+
+
+
+//задание 4
+
 document.getElementById('task4').onclick = function() {
         console.log("Задание 4");
-        let array = [7, 3, 4, 9, 5, 2, 17];
+        let array = [7, 3, 2, 9, 5, 4, 17];
         console.log("Исходный массив: ");
         console.log(array);
         mySort(array);

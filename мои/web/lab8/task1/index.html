@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Простейший браузер</h2>
+
+<input type="text" id="url" placeholder="Введите URL">
+<button onclick="fetchData()">Получить данные</button>
+
+<div id="content"></div>
+
+<script>
+async function fetchData() {
+    const url = document.getElementById('url').value;
+    const content = document.getElementById('content');
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.text();
+        content.innerHTML = data;
+    } catch (error) {
+        content.innerHTML = `Произошла ошибка: ${error.message}`;
+    }
+}
+</script>
+
+</body>
+</html>

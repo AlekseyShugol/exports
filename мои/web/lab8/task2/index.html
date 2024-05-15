@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Приложение с фильтрацией изображений</h2>
+
+<div id="filters">
+  <a href="#" onclick="filterImages('all')">Все</a> |
+  <a href="#" onclick="filterImages('cats')">Коты</a> |
+  <a href="#" onclick="filterImages('dogs')">Собаки</a>
+</div>
+
+<div id="images">
+  <!-- Здесь будут изображения -->
+</div>
+
+<script>
+// Массив с изображениями
+const images = [
+  { src: 'cat2.jpg', type: 'cats' },
+  { src: 'cat3.jpg', type: 'cats' },
+  { src: 'cat4.jpg', type: 'cats' },
+  { src: 'dog1.jpg', type: 'dogs' },
+  { src: 'cat5.jpg', type: 'cats' },
+  { src: 'cat6.jpg', type: 'cats' },
+  { src: 'cat7.jpg', type: 'cats' },
+  { src: 'dog4.jpg', type: 'dogs' },
+  { src: 'cat8.jpg', type: 'cats' },
+  { src: 'dog3.jpg', type: 'dogs' },
+  { src: 'cat9.jpg', type: 'cats' },
+  { src: 'cat10.jpg', type: 'cats' },
+  { src: 'cat11.jpg', type: 'cats' },
+  { src: 'cat12.jpg', type: 'cats' },
+  { src: 'cat13.jpg', type: 'cats' },
+  { src: 'dog2.jpg', type: 'dogs' },
+  
+];
+
+// Функция для фильтрации изображений
+function filterImages(filter) {
+  const imagesDiv = document.getElementById('images');
+  imagesDiv.innerHTML = '';
+
+  const filteredImages = images.filter(image => filter === 'all' || image.type === filter);
+
+  for (const image of filteredImages) {
+    const img = document.createElement('img');
+    img.src = image.src;
+    imagesDiv.appendChild(img);
+  }
+
+  // Используем History API для изменения адреса в адресной строке
+  history.pushState({}, '', `?filter=${filter}`);
+}
+
+// При загрузке страницы применяем фильтр из адресной строки
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+  const filter = params.get('filter') || 'all';
+  filterImages(filter);
+};
+</script>
+
+</body>
+</html>
